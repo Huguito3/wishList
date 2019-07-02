@@ -39,12 +39,16 @@ export class Tab1Page {
               return;
             }
             const listId = this.wishesService.crearLista(data.titulo);
-            this.router.navigateByUrl(`/tabs/tab1/agregar/${ listId }`);
+            this.router.navigateByUrl(`/tabs/tab1/agregar/${listId}`);
           }
         }
       ]
     });
 
     await alert.present();
+  }
+
+  listaSelecionada(lista: Lista) {
+    this.router.navigateByUrl(`/tabs/tab1/agregar/${lista.id}`);
   }
 }
