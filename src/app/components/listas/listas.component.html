@@ -1,0 +1,15 @@
+
+<ion-list color="dark">
+    <ion-item-sliding *ngFor="let list of wishesList"  class="animated fadeInDown">
+        <ion-item detail color="dark" detail (click)="listaSelecionada( list )">
+            <ion-label>{{list.title}}</ion-label>
+            <ion-note slot="end" color="medium">{{ list.items.length}} items</ion-note>
+          </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option (click)="borrarLista(list)" color="danger">
+            <ion-icon slot= "icon-only"name="close"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+   
+  </ion-list>

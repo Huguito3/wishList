@@ -20,9 +20,13 @@ export class WishesService {
     this.guardarStorage();
     return nuevaLista.id;
   }
+  borrarLista(lista: Lista) {
+    this.wishesList = this.wishesList.filter(listaData => listaData.id !== lista.id);
+    this.guardarStorage();
+  }
   obtenerList(id: string | number) {
     id = Number(id);
-    return this.wishesList.find(listaData =>  listaData.id === id);
+    return this.wishesList.find(listaData => listaData.id === id);
   }
   guardarStorage() {
     // uso el JSON stringify para guardarlo como string.

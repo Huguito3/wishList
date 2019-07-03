@@ -13,7 +13,7 @@ import { AlertController } from '@ionic/angular';
 export class Tab1Page {
   wishesList: Lista[] = [];
   constructor(public wishesService: WishesService, private router: Router, public alertController: AlertController) {
-    this.wishesList = this.wishesService.wishesList;
+    //this.wishesList = this.wishesService.wishesList;
   }
   async agregarLista() {
     // this.router.navigateByUrl('/tabs/tab1/agregar');
@@ -48,7 +48,7 @@ export class Tab1Page {
     await alert.present();
   }
 
-  listaSelecionada(lista: Lista) {
-    this.router.navigateByUrl(`/tabs/tab1/agregar/${lista.id}`);
-  }
+  // listaSelecionada(lista: Lista) {
+  //   this.router.navigateByUrl(`/tabs/tab1/agregar/${lista.id}`);
+  // }
 }
