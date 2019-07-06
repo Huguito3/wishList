@@ -56,8 +56,7 @@ export class ListasComponent implements OnInit {
             if (data.titulo.length === 0) {
               return;
             }
-            // revisar
-            lista.title = data.title;
+            lista.title = data.titulo;
             this.wishesService.guardarStorage();
             this.wishesList = this.wishesService.wishesList;
             this.lista.closeSlidingItems();
